@@ -14,10 +14,10 @@ for i in range(999,99,-1):
 		if prod > largest:
 			prodstr = str(prod)
 			if prodstr == prodstr[::-1]:
-				print str(prod), "%i x %i" % (i,j)
 				largest = prod
 				break
 		else:
 			break
 
+print largest
 
