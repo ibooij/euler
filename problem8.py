@@ -21,8 +21,6 @@ lines = """73167176531330624919225119674426574742355349194934
 05886116467109405077541002256983155200055935729725
 71636269561882670428252483600823257530420752963450"""
 
-number = "".join([s.strip() for s in lines.split("\n")])
-fives = [number[i:i+5] for i in range(0,len(number) - 5 + 1)]
-products = [reduce(lambda a,b: a * b, [int(c) for c in five], 1) 
-	for five in fives]
-print max(products)
+from operator import mul
+numbers = [int(c) for c in "".join([s.strip() for s in lines.split("\n")])]
+print max([reduce(mul, numbers[i:i+5], 1) for i in range(0,len(numbers) - 4)])
