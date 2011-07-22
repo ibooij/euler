@@ -25,7 +25,6 @@ def find_prime_factors(n):
 	primes = []
 	while product(primes) != n:
 		primes.append(prime_gen.next())
-		print primes
 	return primes[-1]
 
 print find_prime_factors(600851475143)

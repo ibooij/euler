@@ -1,3 +1,4 @@
+#!/usr/bin/python
 """
 Problem 6
 14 December 2001
